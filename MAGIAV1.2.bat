@@ -1702,9 +1702,6 @@ rundll32 printui.dll,PrintUIEntry /k /n"HP Universal Printing PS"
 goto :MENU-PRINTER
 
 
-
-
-
 :MENU-PRINTER
 echo.
 echo.
