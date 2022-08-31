@@ -617,6 +617,7 @@ echo 4.WINRAR
 echo 5.OFFICE 2016
 echo 6.CITRIX
 echo 7.SISSEX
+echo 8.NITRO
 echo.
 echo.
 echo.
@@ -629,7 +630,7 @@ echo 1.CHROME NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :FIREFOX9999999999
 
-rem \\jebus\s\BASICOS\ChromeSetup.exe /S
+"\\jebus\s\BASICOS\ChromeSetup.exe"
 goto :FIREFOX
 
 :CHROMEEXISTE
@@ -644,7 +645,7 @@ echo 2.FIREFOX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :ADOBE
 
-rem \\jebus\s\BASICOS\Firefox Setup 92.0.exe /S
+"\\jebus\s\BASICOS\Firefox Setup 92.0.exe"
 goto :ADOBE
 
 :FIREFOXEXISTE
@@ -658,7 +659,7 @@ if exist "C:\Program Files\Adobe\Acrobat DC" goto :ADOBEEXISTE
 echo ADOBE READER NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :WINRAR
-rem \\jebus\s\BASICOS\AcroRdrDC1902120047_es_ES.exe /S
+"\\jebus\s\BASICOS\AcroRdrDC1902120047_es_ES.exe"
 goto :WINRAR
 
 :ADOBEEXISTE
@@ -674,7 +675,7 @@ echo WINRAR NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :OFFICE2016
 
-rem \\jebus\s\BASICOS\winrar-x64-580es.exe /S
+"\\jebus\s\BASICOS\winrar-x64-580es.exe"
 goto :OFFICE2016
 
 
@@ -690,7 +691,7 @@ echo OFFICE 2016 NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :CITRIX
 
-rem \\jebus\s\BASICOS\Office 2016 x64\setup.exe /S
+"\\jebus\s\BASICOS\Office 2016 x64\setup.exe"
 goto :CITRIX
 
 :OFFICE2016EXISTE
@@ -705,7 +706,8 @@ echo CITRIX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :SISSEX
 
-rem \\jebus\s\BASICOS\Citrix Nuevo\CitrixReceiver.exe /S
+"\\jebus\s\BASICOS\Citrix Nuevo\CitrixReceiver.exe"
+
 goto :SISSEX
 
 :CITRIXEXISTE
@@ -718,15 +720,42 @@ if exist "C:\Program Files (x86)\SISSEX" goto :SISSEXEXISTE
 :SISSEXNOEXISTE
 echo SISSEX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
-if /i not "%respuesta%" == "y" goto :EXITPROGRAMAS
-rem \\jebus\s\BASICOS\SISEXsetup.exe /S
-goto :EXITPROGRAMAS
+if /i not "%respuesta%" == "y" goto :NITRO
+"\\jebus\s\BASICOS\SISEXsetup.exe"
+goto :NITRO
 
 
 :SISSEXEXISTE
 echo 7.SISSEX EXISTE! 
 pause
+goto :NITRO
+
+
+:NITRO
+if exist "C:\Program Files\Nitro\Pro 10\" goto :NITROEXISTE
+:NITRONOEXISTE
+echo NITRO NO ESTA INSTALADO!.
+set /p respuesta="Queres instalarlo? [y|n]: "
+if /i not "%respuesta%" == "y" goto :EXITPROGRAMAS
+"\\jebus\s\BASICOS\Nitro Pro 64 bit + serial\nitro_pro10_x64.exe"
+pause
+echo.
+echo.
+echo.
+echo Ahora se abrira el programa, y deberan realizar la activacion del mismo
+echo Alli completen los datos con la informacion provista previamente en el siguiente archivo
+"C:\Program Files\Nitro\Pro 10\NitroPDF.exe"
+"\\jebus\s\BASICOS\Nitro Pro 64 bit + serial\Instrucciones.txt"
+
 goto :EXITPROGRAMAS
+
+
+:NITROEXISTE
+echo 7.NITRO EXISTE! 
+pause
+goto :EXITPROGRAMAS
+
+
 
 :EXITPROGRAMAS
 echo.
@@ -840,7 +869,8 @@ echo .......... 6- RICOH C4503                                                  
 echo .......... 7- RICOH SP 5300DN                                                             ..........
 echo .......... 8- SAMSUNG MULTIEXPRESS 6555                                                   ..........
 echo .......... 9- HP x476dw                                                                   ..........
-echo .......... 10- Volver al MENU                                                             ..........
+echo .......... 10- ADMINISTRAR IMPRESORAS                                                     ..........
+echo .......... 11- Volver al MENU                                                             ..........
 echo.
 echo ....................................................................................................
 
@@ -854,6 +884,7 @@ IF %M%==6 GOTO RICOH4503
 IF %M%==7 GOTO RICOH5300
 IF %M%==8 GOTO SAMSUNG6555
 IF %M%==9 GOTO HPx476
+IF %M%==10 GOTO ADMINISTRAR
 IF %M%==10 GOTO MENU
 
 
@@ -1700,6 +1731,132 @@ if /i not "%respuesta%" == "y" goto :MENU-PRINTER
 rundll32 printui.dll,PrintUIEntry /k /n"HP Universal Printing PS"
 
 goto :MENU-PRINTER
+
+
+:ADMINISTRAR
+
+echo ....................................................................................................
+echo                                     ADMINISTRACION DE IMPRESORAS
+echo.
+echo .......... 1- Lista de impresoras en el equipo                                            ..........
+echo .......... 2- Borrar 1 impresora en particular                                            ..........
+echo .......... 3- Borrar todas las impresoras                                                 ..........
+echo .......... 4- Seleccionar impresora por defecto                                           ..........
+echo .......... 5- Volver al MENU de MAGIA                                                     ..........
+echo .......... 6- Volver al MENU de impresoras                                                ..........
+echo .......... 7- Volver al MENU de MAGIA                                                     ..........
+echo .......... 8- Salir del programa                                                          ..........
+echo.
+echo ....................................................................................................
+
+SET /P M=Selecciona 1, 2, 3, 4 ,5 ,6 ,7 o 8 y apreta ENTER: 
+IF %M%==1 GOTO LISTA-IMPRESORAS
+IF %M%==2 GOTO BORRAR-IMPRESORA
+IF %M%==3 GOTO BORRAR-IMPRESORAS
+IF %M%==4 GOTO IMPRESORAxDEFECTO
+IF %M%==5 GOTO IMPRESORA-PDF
+IF %M%==6 GOTO IMPRESORAS
+IF %M%==7 GOTO MENU
+IF %M%==8 GOTO FIN
+
+:LISTA-IMPRESORAS
+echo.
+echo.
+echo.
+wmic printer list brief
+echo.
+echo.
+echo.
+goto :MENU-PRINTER
+
+
+:BORRAR-IMPRESORA
+cls
+echo Queres borrar una impresora?.
+echo.
+echo Por favor, de la lista de impresoras que aparecera a continuacion, con el mouse selecciona el nombre (completo) de la impresora que queres desinstalar
+echo luego, con el texto seleccionado. APRETA EL BOTON DERECHO del mouse (esto lo copia)
+echo.
+echo.
+wmic printer list brief
+echo.
+echo.
+echo.
+set /p "impresora-copiada= PEGA ACA LA IMPRESORA QUE QUERES DESINSTALAR : "
+set "respuesta=y"
+set /p "respuesta= Queres continuar y borrar la impresora %impresora-copiada% [y|n]: "
+if /i not "%respuesta%" == "y" goto :IMPRESORAS
+
+Cscript C:\Windows\System32\Printing_Admin_Scripts\es-ES\prnmngr.vbs -d  -p "%impresora-copiada%"
+
+goto :MENU-PRINTER
+
+
+:BORRAR-IMPRESORAS
+echo.
+echo.
+echo Estas a punto de borrar todas las impresoras de la PC
+echo !CUIDADO! esto borrara tambien las impresoras de PDF, ONENOTE, ETC. Estas seguro?
+pause
+
+echo actualmente las impresoras en esta PC son las siguientes:
+wmic printer list brief
+
+echo.
+echo.
+set "respuesta=y"
+set /p "respuesta= Queres continuar y borrar TODAS LAS IMPRESORAS? [y|n]: "
+if /i not "%respuesta%" == "y" goto :IMPRESORAS
+
+Cscript C:\Windows\System32\Printing_Admin_Scripts\es-ES\prnmngr.vbs -x
+echo.
+echo.
+echo.
+echo El listado actual de impresoras es:
+echo.
+wmic printer list brief
+
+echo a continuacion procederemos a reinstalar la impresora PDF de WINDOWS.
+echo Por favor, deja que el script continue y no lo cierres hasta que finalice el procedimiento
+pause
+echo Procedemos a deshabilitar el servicio original
+dism /Online /Disable-Feature /FeatureName:"Printing-PrintToPDFServices-Features" /NoRestart
+
+echo y ahora procedemos a reinstalar el servicio
+
+dism /Online /Enable-Feature /FeatureName:"Printing-PrintToPDFServices-Features" /NoRestart
+
+echo.
+echo.
+echo finalmente comprobamos que este instalado como corresponde:
+wmic printer list brief
+echo.
+echo.
+echo a continuacion, volveremos al MENU de impresoras.
+goto :IMPRESORAS
+
+
+:IMPRESORAxDEFECTO
+cls
+echo Queres seleccionar una impresora como determinada?.
+echo.
+echo Por favor, de la lista de impresoras que aparecera a continuacion, con el mouse selecciona el nombre (completo) de la impresora que queres poner como principal
+echo luego, con el texto seleccionado. APRETA EL BOTON DERECHO del mouse (esto lo copia)
+echo.
+echo.
+wmic printer list brief
+echo.
+echo.
+echo.
+set /p "impresora-copiada= PEGA ACA LA IMPRESORA QUE QUERES SELECCIONAR COMO PRINCIPAL : "
+set "respuesta=y"
+set /p "respuesta= Queres continuar y seleccionar la impresora "%impresora-copiada%" [y|n]: "
+if /i not "%respuesta%" == "y" goto :IMPRESORAS
+
+Cscript C:\Windows\System32\Printing_Admin_Scripts\es-ES\prnmngr.vbs -t  -p "%impresora-copiada%"
+
+:IMPRESORA-PDF
+
 
 
 :MENU-PRINTER
