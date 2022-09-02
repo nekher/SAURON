@@ -164,20 +164,18 @@ echo             8888888888 NOMBRE DE LA OPCION   88888888888888888888888888888 
 echo             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 echo             8888    1- MEJORAS DE WINDOWS (PACK)       88  Sirve para mejorar el funcionamiento de la PC     8888
 echo             8888    2- MEJORAS DE WINDOWS (INDIVIDUAL) 88  IGUAL al anterior, pero se puede elegir cada una  8888
-echo             8888    3- REVERTIR CAMBIOS                88  Vuelve las opciones a valores x defecto           8888
-echo             8888    4- VOLVER AL MENU DE SAURON        88  Vuelve al menu principal                          8888
-echo             8888    5- FINALIZAR EL PROGRAMA           88  Adios, volve pronto                               8888
+echo             8888    3- VOLVER AL MENU DE SAURON        88  Vuelve al menu principal                          8888
+echo             8888    4- FINALIZAR EL PROGRAMA           88  Adios, volve pronto                               8888
 echo             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 echo             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 echo.
 echo.
 echo Por Favor, elegi el numero del modulo que deseas usar :
-SET /P M=Selecciona 1, 2, 3, 4 o 5 y apreta ENTER: 
+SET /P M=Selecciona 1, 2, 3, o 4 y apreta ENTER: 
 IF %M%==1 GOTO INICIO
 IF %M%==2 GOTO INDIVIDUAL
-IF %M%==3 GOTO REVERTIR
-IF %M%==4 GOTO SAURON-MENU
-IF %M%==5 GOTO FIN
+IF %M%==3 GOTO SAURON-MENU
+IF %M%==4 GOTO FIN
 
 :INICIO
 cls
@@ -587,40 +585,6 @@ IF %M%==9 GOTO SERVICIOSINICIO
 IF %M%==10 GOTO MAGIA-MENU
 
 
-:REVERTIR
-cls
-echo                                               :::      :::::::      :::     
-echo                                              :+:      :+:   :+:    :+:      
-echo                                             +:+ +:+   +:+  :+:+   +:+ +:+   
-echo                                            +#+  +:+   +#+ + +:+  +#+  +:+   
-echo                                           +#+#+#+#+#+ +#+#  +#+ +#+#+#+#+#+ 
-echo                                                 #+#   #+#   #+#       #+#   
-echo                                                 ###    #######        ###   
-echo.
-echo.
-echo.
-echo.
-echo                                      PARECE QUE LLEGASTE A UN LUGAR QUE NO DEBIAS
-echo                                    TAL VEZ EN OTRA VERSION, YA ESTE LO QUE BUSCABAS...
-echo.
-echo.
-echo.          
-echo "                     T H E       ,.__                                       XXXXXxX xxxXXXXXX
-echo "                                  ((-\)),                                       xXX      xXX
-echo "                                  | . . {         ___.                            X      XX
-echo "                     T R U T H    (  _) )       /(()-/)                             X   xX
-echo "                                   \ _ /       / /. . |\                            xx xX
-echo "                                 __-\_/-__     ||  ]  )|        T  H  E   (X)   F  I  L  E  S
-echo "                     I S        / \ \@//  \    /|  -  ||                            xX xx
-echo "                               |  | |{||__|\   /_\___/|,                           Xx   Xx
-echo "                               |  | |}||  ||  |    \/   \                         XX     XX   TM
-echo "                     O U T     |  {.|{/|  ||  | |_| __| |                       xXX       XX
-echo "                               |  /.|__|  ||  \___\_____/                     xXXXXXXXXx XXXXxXx
-echo "                                \/ .|=>|  |/   /   o|  \
-echo "                     T H E R E
-
-pause
-goto :MAGIA-MENU
 
 :SOFTWARE-MENU
 rem               88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
@@ -1667,7 +1631,7 @@ cls
 echo    ________ ________ ________ ________ ________ ________ ________ ________ ________ ________ ________                        
 echo    """""""" """""""" """""""" """""""" """""""" """""""" """""""" """""""" """""""" """""""" """"""""                      
 echo.                                                                                               
-echo      dP"Y8    db    .dP"Y8 8b    d8 .dP"Y8 88   88 88b 88  dP""b8       dP'   888888 888888 888888 
+echo       dP"Y8    db    .dP"Y8 8b    d8 .dP"Y8 88   88 88b 88  dP""b8       dP'   888888 888888 888888 
 echo      `Ybo."   dPYb   `Ybo." 88b  d88 `Ybo." 88   88 88Yb88 dP   `"     .d8'    88oo." 88oo." 88oo." 
 echo      o.`Y8b  dP__Yb  o.`Y8b 88YbdP88 o.`Y8b Y8   8P 88 Y88 Yb  "88     8P"""Yb    `8b    `8b    `8b 
 echo      8bodP' dP""""Yb 8bodP' 88 YY 88 8bodP' `YbodP' 88  Y8  YboodP     `YboodP 8888P' 8888P' 8888P' 
@@ -1867,9 +1831,8 @@ echo.
 wmic printer list brief
 pause
 echo.
-echo.
-echo.
 goto :IMPRESORAS-MENU
+
 
 
 :BORRAR-IMPRESORA
