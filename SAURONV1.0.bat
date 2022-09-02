@@ -119,7 +119,7 @@ echo             888888888888888888888888888888888888888888888888888888888888888
 echo.
 echo.
 echo Por Favor, elegi el numero del modulo que deseas usar :
-SET /P M=Selecciona 1, 2, 3, 4 ,5 ,6 0 7 y apreta ENTER: 
+SET /P M=Selecciona 1, 2, 3, 4 ,5 ,6 o 7 y apreta ENTER: 
 IF %M%==1 GOTO MAGIA-MENU
 IF %M%==2 GOTO SOFTWARE-MENU
 IF %M%==3 GOTO IMPRESORAS-MENU
@@ -1987,19 +1987,23 @@ echo             8888    2 - INFORMACION SOBRE EL USUARIO (GPRESULT)            
 echo             8888    3 - TESTS DE CONECTIVIDAD (PING a GATEWAY, PROXY, PUBLIC ADDRESS)                        8888
 echo             8888    4 - PROXY ON / OFF                                                                       8888
 echo             8888    5 - DESCUBRIR MAC ADDRESS                                                                8888
-echo             8888    6 - VOLVER AL MENU DE SAURON                                                             8888
-echo             8888    7 - SALIR DEL PROGRAMA                                                                   8888
+echo             8888    6 - REVISAR CONEXIONES ACTIVAS (NETSTAT)                                                 8888
+echo             8888    7 - BUSCAR LA RUTA A UNA IP (TRACERT)                                                    8888
+echo             8888    8 - VOLVER AL MENU DE SAURON                                                             8888
+echo             8888    9 - SALIR DEL PROGRAMA                                                                   8888
 echo             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 echo             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 echo.
-SET /P M=Selecciona 1, 2, 3, 4, 5, 6, o 7 y apreta ENTER: 
+SET /P M=Selecciona 1, 2, 3, 4, 5, 6, 7, 8, o 9 y apreta ENTER: 
 IF %M%==1 GOTO RED
 IF %M%==2 GOTO USUARIO
 IF %M%==3 GOTO CONECTIVIDAD
 IF %M%==4 GOTO PROXY
 IF %M%==5 GOTO MACADRESS
-IF %M%==6 GOTO SAURON-MENU
-IF %M%==7 GOTO FIN
+IF %M%==6 GOTO NETSTATT
+IF %M%==7 GOTO TRACERTT
+IF %M%==8 GOTO SAURON-MENU
+IF %M%==9 GOTO FIN
 
 :RED
 cls
@@ -2027,7 +2031,7 @@ cls
 echo "                                 _
 echo "                            ~0  (_|
 echo "                           |(_~|^~~|
-echo "                           TT/_ T"T
+echo "                           TT/_ T T
 echo "                      ^^^^^^^^^^^^^^^^^^^
 echo.
 echo.
@@ -2140,6 +2144,31 @@ goto :CONEXMENU
 
 
 :MACADRESS
+cls
+echo "                                               ______              
+echo "                                            .-'      `-.           
+echo "                                          .'            `.         
+echo "                                         /                \        
+echo "                                        ;                 ;`       
+echo "                                        |       MAC       |;       
+echo "                                        ;                 ;|
+echo "                                        '\               / ;       
+echo "                                         \`.           .' /        
+echo "                                          `.`-._____.-' .'         
+echo "                                            / /`_____.-'           
+echo "                                           / / /                   
+echo "                                          / / /
+echo "                                         / / /
+echo "                                        / / /
+echo "                                       / / /
+echo "                                      / / /
+echo "                                     / / /
+echo "                                    / / /
+echo "                                   / / /
+echo "                                   \/_/
+echo.
+echo.
+echo.
 echo Este Script sirve para buscar la Mac Adress de una direccion IP elegida.
 set /p "IP=Por favor, indicame la IP: "
 arp -a %IP%
@@ -2273,96 +2302,79 @@ echo Ok, la direccion IP que elegiste es : %GOOGLE%
 goto :STARTPING 
 
 
-:FINN
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+:NETSTATT
+cls
+echo "                                             .-.
+echo "                                            (;;;)
+echo "                                             \_|
+echo "                                               \ _.--l--._
+echo "                                              . \    |     `.
+echo "                                            .` `.\   |    .` `.
+echo "                                          .`     `\  |  .`     `.
+echo "                                         / __      \.|.`      __ \
+echo "                                         |   ''--._ \V  _.--''   |
+echo "                                         |        _ (') _        |
+echo "                                         | __..--'   ^   '--..__ | _
+echo "                                         \         .`|`.         /-.)
+echo "                                          `.     .`  |  `.     .`
+echo "                                            `. .`    |    `. .`
+echo "                                              `._    |    _.`|
+echo "                                                  `--l--`  | |
+echo "                                                           | |
+echo "                                                           | |
+echo "                                                           | |
+echo "                                                  o        | |     o
+echo "                                                   )    o  | |    (
+echo "                                                  \|/  (   | |   \|/
+echo "                                                      \|/  | | o  WWwwwW
+echo "                                                         o | |  )  
+echo "                                                 WWwwWww ( | | \|/
+echo "                                                    LGB \|/WWwwWWwW
+echo.
+echo.
+echo.
+echo Este script, ejecuta el comando NETSTAT -a 
+echo Esto muestra el listado completo de conexiones que existen en la PC en este momento.
+echo.
+echo.
+pause
+netstat -a
+goto :CONEXMENU
+
+
+
+:TRACERTT
+cls
+echo "                                               ,-.
+echo "                                              / \  `.  __..-,O
+echo "                                             :   \ --''_..-'.'
+echo "                                             |    . .-' `. '.
+echo "                                             :     .     .`.'
+echo "                                              \     `.  /  ..
+echo "                                               \      `.   ' .
+echo "                                                `,       `.   \
+echo "                                               ,|,`.        `-.\
+echo "                                              '.||  ``-...__..-`
+echo "                                               |  |
+echo "                                               |__|
+echo "                                               /||\
+echo "                                              //||\\
+echo "                                             // || \\
+echo "                                          __//__||__\\__
+echo "                                         '--------------'
+echo.
+echo.
+echo La idea de este script es poder buscar el camino que recorren los paquetes, desde tu PC hasta
+echo el destino elegido. Se usa el comando TRACERT
+echo.
+echo.
+set /p "IPTRACE=Por favor, decime la direccion de la direccion IP a la cual queres ver el camino: "
+echo.
+echo Ok, usaremos la direccion IP %IPTRACE%
+pause
+tracert %IPTRACE%
+
+goto :CONEXMENU
 
 
 :FIN
