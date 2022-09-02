@@ -1,11 +1,23 @@
 @echo off
 title SAURON v1.0
 color 04
-echo.
-echo.
-echo.
-echo.
-echo.
+rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+rem 888                                                                                                                         888
+rem 888  Este script fue creado por Maximiliano RD. El mismo puede ser utilizado libremente, reproducido, y modificado como     888
+rem 888  se desee de forma gratuita, siempre que sea sin fines de lucro. Solo solicito que se mantenga la autoria del mismo y   888
+rem 888  se aclaren los cambios realizados.                                                                                     888
+rem 888  Parte del codigo esta tomado de distintas partes de internet, lamento no poder contar con el nombre de los autores     888
+rem 888  de cada pedazo de los scripts, pero se agradece el aporte que hizo cada une de elles.                                  888
+rem 888                                                                                                                         888
+rem 888                                                  CUIDADO                                                                888
+rem 888                                                -----------                                                              888
+rem 888       No me hago responsable de cualquier problema que el script pueda ocacionar. Usen bajo su propio riesgo            888
+rem 888                                                                                                                         888
+rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+
+
 echo                   ...(/(..........................,..,,,,***..,.,,,,***,,,,,****,................//*.....              
 echo                    .,///......................,***,,.,,******/////****///////((/,,,,.............///.......            
 echo                  ..../(((...............,*****,*/(((/***//(((#@@@@#((#####(###@####(//**..........////......   .        
@@ -2219,6 +2231,7 @@ echo.
 echo.
 echo.
 echo.
+
 :STARTPING
 echo Ok, procederemos a usar las 4 direcciones siguientes:
 echo Puerta de enlace = %GATEWAY%
@@ -2343,6 +2356,5 @@ pause
 tracert %IPTRACE%
 
 goto :CONEXMENU
-
 
 :FIN
