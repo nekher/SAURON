@@ -1,4 +1,5 @@
 @echo off
+title SAURON v1.0
 color 04
 echo.
 echo.
@@ -94,6 +95,7 @@ echo.
 echo.
 ping localhost -n 2 >nul
 :SAURON-MENU
+title SAURON-MENU
 cls
 color 02
 echo.
@@ -132,6 +134,7 @@ rem               8888888888888888888888888888888888  COMIENZO DEL MODULO 1- MAG
 rem               88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 
 :MAGIA-MENU
+title MAGIA v1.2
 cls
 color 1f
 prompt #MAGIA#
@@ -593,7 +596,7 @@ rem               88888888888888888888888888888888888888888888888888888888888888
 
 
 :SOFTWARE-MENU
-
+title SOFTWARE
 cls
 color 03
 
@@ -892,6 +895,7 @@ rem               88888888888888888888888888888888888888888888888888888888888888
 
 :IMPRESORAS-MENU
 :IMPRESORAS
+title IMPRESORAS
 color 6
 cls
 REM Script original creado por conankiz (07-02-2021) Modificado por NMRD en 2022
@@ -1928,6 +1932,7 @@ rem               88888888888888888888888888888888888888888888888888888888888888
 
 :CONECTIVIDAD-MENU
 cls
+title CONECTIVIDAD
 color 0D
 echo.
 echo "                                ___   _      ___   _      ___   _      ___   _      ___   _
