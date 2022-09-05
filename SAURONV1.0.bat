@@ -2195,9 +2195,9 @@ echo 4 - Por ultimo, usamos a GOOGLE como metodo de control del "Internet hacia 
 echo.
 echo.
 echo.
-set "GATEWAY=100.10.1.220"
-set "PROXY=iwsva:8080"
-set "PADDRESS=190.104.195.181"
+set "GATEWAY=100.90.8.12"
+set "PROXY=proxy:8080"
+set "PADDRESS=123.123.123.123"
 set "GOOGLE=173.194.217.94"
 
 :CHECKGATEWAY
