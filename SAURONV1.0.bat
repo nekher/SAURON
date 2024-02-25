@@ -4,7 +4,7 @@ color 04
 rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 rem 8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
 rem 888                                                                                                                         888
-rem 888  Este script fue creado por Maximiliano RD. El mismo puede ser utilizado libremente, reproducido, y modificado como     888
+rem 888  Este script fue creado por NMRD. El mismo puede ser utilizado libremente, reproducido, y modificado como               888
 rem 888  se desee de forma gratuita, siempre que sea sin fines de lucro. Solo solicito que se mantenga la autoria del mismo y   888
 rem 888  se aclaren los cambios realizados.                                                                                     888
 rem 888  Parte del codigo esta tomado de distintas partes de internet, lamento no poder contar con el nombre de los autores     888
@@ -706,7 +706,7 @@ echo 1.CHROME NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :FIREFOX9999999999
 
-"\\jebus\s\BASICOS\ChromeSetup.exe"
+"\\UBICACION\ChromeSetup.exe"
 goto :FIREFOX
 
 :CHROMEEXISTE
@@ -721,7 +721,7 @@ echo 2.FIREFOX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :ADOBE
 
-"\\jebus\s\BASICOS\Firefox Setup 92.0.exe"
+"\\UBICACION\Firefox Setup 92.0.exe"
 goto :ADOBE
 
 :FIREFOXEXISTE
@@ -735,7 +735,7 @@ if exist "C:\Program Files\Adobe\Acrobat DC" goto :ADOBEEXISTE
 echo ADOBE READER NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :WINRAR
-"\\jebus\s\BASICOS\AcroRdrDC1902120047_es_ES.exe"
+"\\UBICACION\AcroRdrDC1902120047_es_ES.exe"
 goto :WINRAR
 
 :ADOBEEXISTE
@@ -751,7 +751,7 @@ echo WINRAR NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :OFFICE2016
 
-"\\jebus\s\BASICOS\winrar-x64-580es.exe"
+"\\UBICACION\winrar-x64-580es.exe"
 goto :OFFICE2016
 
 
@@ -767,7 +767,7 @@ echo OFFICE 2016 NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :CITRIX
 
-"\\jebus\s\BASICOS\Office 2016 x64\setup.exe"
+"\\UBICACION\Office 2016 x64\setup.exe"
 goto :CITRIX
 
 :OFFICE2016EXISTE
@@ -782,7 +782,7 @@ echo CITRIX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :SISSEX
 
-"\\jebus\s\BASICOS\Citrix Nuevo\CitrixReceiver.exe"
+"\\UBICACION\Citrix Nuevo\CitrixReceiver.exe"
 
 goto :SISSEX
 
@@ -797,7 +797,7 @@ if exist "C:\Program Files (x86)\SISSEX" goto :SISSEXEXISTE
 echo SISSEX NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :NITRO
-"\\jebus\s\BASICOS\SISEXsetup.exe"
+"\\UBICACION\SISEXsetup.exe"
 goto :NITRO
 
 
@@ -813,7 +813,7 @@ if exist "C:\Program Files\Nitro\Pro 10\" goto :NITROEXISTE
 echo NITRO NO ESTA INSTALADO!.
 set /p respuesta="Queres instalarlo? [y|n]: "
 if /i not "%respuesta%" == "y" goto :EXITPROGRAMAS
-"\\jebus\s\BASICOS\Nitro Pro 64 bit + serial\nitro_pro10_x64.exe"
+"\\UBICACION\Nitro Pro 64 bit + serial\nitro_pro10_x64.exe"
 pause
 echo.
 echo.
@@ -821,7 +821,7 @@ echo.
 echo Ahora se abrira el programa, y deberan realizar la activacion del mismo
 echo Alli completen los datos con la informacion provista previamente en el siguiente archivo
 "C:\Program Files\Nitro\Pro 10\NitroPDF.exe"
-"\\jebus\s\BASICOS\Nitro Pro 64 bit + serial\Instrucciones.txt"
+"\\UBICACION\Nitro Pro 64 bit + serial\Instrucciones.txt"
 
 goto :EXITPROGRAMAS
 
@@ -865,11 +865,11 @@ IF %M%==1 GOTO LINK-GDE
 IF %M%==2 GOTO SOFTWARE-MENU
 
 :LINK-GDE
-copy \\jebus\s\LNK\GDE.url "C:\%HOMEPATH%\Desktop\"
+copy \\UBICACION\LNK\GDE.url "C:\%HOMEPATH%\Desktop\"
 :LINK-OWA
-copy \\jebus\s\LNK\OWA.url "C:\%HOMEPATH%\Desktop\"
+copy \\UBICACION\LNK\OWA.url "C:\%HOMEPATH%\Desktop\"
 :LINK-OUTLOOK
-copy \\jebus\s\LNK\OUTLOOK.lnk "C:\%HOMEPATH%\Desktop\"
+copy \\UBICACION\LNK\OUTLOOK.lnk "C:\%HOMEPATH%\Desktop\"
 
 goto :SOFTWARE-MENU
 
@@ -986,7 +986,7 @@ if /i not "%respuesta%" == "y" goto :R307-32
 
 :R307-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C307\x64\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C307\x64\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP C307 PCL 6"
@@ -997,7 +997,7 @@ goto :RICOH307-GO
 
 :R307-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C307\x32\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C307\x32\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP C307 PCL 6"
@@ -1084,7 +1084,7 @@ if /i not "%respuesta%" == "y" goto :R430-32
 
 :R430-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 430F\64bit\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 430F\64bit\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH IM 430 PCL 6"
@@ -1095,7 +1095,7 @@ goto :RICOH430-GO
 
 :R430-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 430F\32bit\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 430F\32bit\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH IM 430 PCL 6"
@@ -1182,7 +1182,7 @@ if /i not "%respuesta%" == "y" goto :R502-32
 
 :R502-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh P 502\x 64\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh P 502\x 64\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH P 502 PCL 6"
@@ -1193,7 +1193,7 @@ goto :RICOH502-GO
 
 :R502-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh P 502\x 32\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh P 502\x 32\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH P 502 PCL 6"
@@ -1281,7 +1281,7 @@ if /i not "%respuesta%" == "y" goto :R550-32
 
 :R550-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 550\x64\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 550\x64\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH IM 550 PCL 6"
@@ -1292,7 +1292,7 @@ goto :RICOH550-GO
 
 :R550-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 550\x32\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh IM 550\x32\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH IM 550 PCL 6"
@@ -1374,7 +1374,7 @@ if /i not "%respuesta%" == "y" goto :R4054-32
 
 :R4054-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\RICOH\Ricoh 4054\64 bits\disk1"
+set DriversFolder="\\UBICACION\Drivers\RICOH\Ricoh 4054\64 bits\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP 4054 PCL 6"
@@ -1385,7 +1385,7 @@ goto :RICOH4054-GO
 
 :R4054-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\RICOH\Ricoh 4054\32 bits\disk1"
+set DriversFolder="\\UBICACION\Drivers\RICOH\Ricoh 4054\32 bits\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP 4054 PCL 6"
@@ -1473,7 +1473,7 @@ if /i not "%respuesta%" == "y" goto :R4503-32
 
 :R4503-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C4503\x64\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C4503\x64\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP C4503 PCL 6"
@@ -1484,7 +1484,7 @@ goto :RICOH4503-GO
 
 :R4503-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\i\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C4503\x32\disk1"
+set DriversFolder="\\UBICACION\DRIVERS PARA IMAGENES\RICOH\Ricoh MP C4503\x32\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH MP C4503 PCL 6"
@@ -1573,7 +1573,7 @@ if /i not "%respuesta%" == "y" goto :R5300-32
 
 :R5300-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\RICOH\Ricoh SP 5300DN\64 Bits\disk1"
+set DriversFolder="\\UBICACION\RICOH\Ricoh SP 5300DN\64 Bits\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH SP 5300 PCL 6"
@@ -1584,7 +1584,7 @@ goto :RICOH5300-GO
 
 :R5300-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\RICOH\Ricoh SP 5300DN\32 Bits\disk1"
+set DriversFolder="\\UBICACION\RICOH\Ricoh SP 5300DN\32 Bits\disk1"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="RICOH SP 5300 PCL 6"
@@ -1673,7 +1673,7 @@ if /i not "%respuesta%" == "y" goto :R6555-32
 
 :R6555-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\SAMSUNG\MultiExpress 6555 GENERICO\Printer\UPD_PS"
+set DriversFolder="\\UBICACION\SAMSUNG\MultiExpress 6555 GENERICO\Printer\UPD_PS"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="Samsung Universal Print Driver 3 PS"
@@ -1684,7 +1684,7 @@ goto :RICOH6555-GO
 
 :R6555-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\SAMSUNG\MultiExpress 6555 GENERICO\Printer\UPD_PS"
+set DriversFolder="\\UBICACION\SAMSUNG\MultiExpress 6555 GENERICO\Printer\UPD_PS"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="Samsung Universal Print Driver 3 PS"
@@ -1772,7 +1772,7 @@ if /i not "%respuesta%" == "y" goto :Rx476-32
 
 :Rx476-64
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\HP\HP Universal Print Driver\ps-x64-7.0.1.24923"
+set DriversFolder="\\UBICACION\HP\HP Universal Print Driver\ps-x64-7.0.1.24923"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="HP Universal Printing PS"
@@ -1783,7 +1783,7 @@ goto :RICOHx476-GO
 
 :Rx476-32
 rem aca colocamos la ruta que tendra la carpeta que contenga todos los drivers. 
-set DriversFolder="\\jebus\s\Drivers\HP\HP Universal Print Driver\ps-x64-7.0.1.24923"
+set DriversFolder="\\UBICACION\HP\HP Universal Print Driver\ps-x64-7.0.1.24923"
 
 rem Aca colocamos el nombre que tiene que tener la impresora. El nombre debe ser el mismo que figura en el .inf de instalacion.
 set NamePrinter="HP Universal Printing PS"
@@ -2067,7 +2067,7 @@ IF %M%==3 GOTO CONECTIVIDAD-MENU
 :PROXYON
 echo procedamos a revisar el proxy.
 set "respuesta=y"
-set /p "respuesta=El Proxy sigue siendo IWSVA:8080 [y|n]: "
+set /p "respuesta=El Proxy sigue siendo PROXY:PUERTO [y|n]: "
 if /i not "%respuesta%" == "y" goto :CAMBIARPROXY
 echo.
 echo.
@@ -2087,14 +2087,14 @@ if /i not "%respuesta%" == "n" goto :PORXYPRIMERAVEZ
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1 /f
 echo.
 echo.
-echo El proxy ahora es IWSVA:8080
+echo El proxy ahora es PROXY:PUERTO
 echo Volvamos al MENU
 pause
 goto :PROXY
 
 :PORXYPRIMERAVEZ
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 1
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d iwsva:8080
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /t REG_SZ /d PROXY:PUERTO
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyUser /t REG_SZ /d 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyPass /t REG_SZ /d 
 netsh winhttp import proxy source=ie
@@ -2195,9 +2195,9 @@ echo 4 - Por ultimo, usamos a GOOGLE como metodo de control del "Internet hacia 
 echo.
 echo.
 echo.
-set "GATEWAY=100.90.8.12"
+set "GATEWAY=127.0.0.1"
 set "PROXY=proxy:8080"
-set "PADDRESS=123.123.123.123"
+set "PADDRESS=127.0.0.1"
 set "GOOGLE=173.194.217.94"
 
 :CHECKGATEWAY
